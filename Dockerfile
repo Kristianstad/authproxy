@@ -9,7 +9,7 @@ ARG SaM_VERSION="2.0.5-3.14"
 ARG IMAGETYPE="application"
 ARG RUNDEPS="nginx"
 ARG STARTUPEXECUTABLES="/usr/sbin/nginx"
-ARG MAKEDIRS="/var/log/nginx /usr/lib/nginx/modules /run/nginx"
+ARG MAKEDIRS="/var/log/nginx /usr/lib/nginx/modules /var/lib/nginx/tmp /run/nginx"
 # ARGs (can be passed to Build/Final) </END>
 
 # Generic template (don't edit) <BEGIN>
@@ -35,7 +35,8 @@ COPY --from=build /finalfs /
 # Final
 # =========================================================================
 ENV VAR_CONFIG_DIR="/etc/nginx" \
-    VAR_LINUX_USER="nginx"
+    VAR_LINUX_USER="nginx" \
+    VAR_FINAL_COMMAND="nginx -g daemon off;"
 
 # Generic template (don't edit) <BEGIN>
 USER starter
