@@ -10,6 +10,7 @@ ARG IMAGETYPE="application"
 ARG RUNDEPS="nginx"
 ARG STARTUPEXECUTABLES="/usr/sbin/nginx"
 ARG MAKEDIRS="/var/log/nginx /usr/lib/nginx/modules /var/lib/nginx/tmp /run/nginx"
+ARG LINUXUSEROWNED="/var/log/nginx /usr/lib/nginx/modules /var/lib/nginx/tmp /run/nginx"
 # ARGs (can be passed to Build/Final) </END>
 
 # Generic template (don't edit) <BEGIN>
