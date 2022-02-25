@@ -9,6 +9,7 @@ ARG SaM_VERSION="2.0.5-3.14"
 ARG IMAGETYPE="application"
 ARG RUNDEPS="nginx"
 ARG STARTUPEXECUTABLES="/usr/sbin/nginx"
+ARG MAKEDIRS="/var/log/nginx /usr/lib/nginx/modules /run/nginx"
 # ARGs (can be passed to Build/Final) </END>
 
 # Generic template (don't edit) <BEGIN>
