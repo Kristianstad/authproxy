@@ -34,7 +34,8 @@ COPY --from=build /finalfs /
 # =========================================================================
 # Final
 # =========================================================================
-ENV VAR_CONFIG_DIR="/etc/nginx"
+ENV VAR_CONFIG_DIR="/etc/nginx" \
+    VAR_LINUX_USER="nginx"
 
 # Generic template (don't edit) <BEGIN>
 USER starter
