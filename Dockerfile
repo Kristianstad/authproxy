@@ -7,7 +7,7 @@
 # ARGs (can be passed to Build/Final) <BEGIN>
 ARG SaM_VERSION="2.0.5-3.14"
 ARG IMAGETYPE="application"
-ARG RUNDEPS="nginx thttpd"
+ARG RUNDEPS="nginx apache2-utils"
 ARG STARTUPEXECUTABLES="/usr/sbin/nginx"
 ARG MAKEDIRS="/var/log/nginx /usr/lib/nginx/modules /var/lib/nginx/tmp /run/nginx"
 ARG LINUXUSEROWNED="/var/log/nginx /usr/lib/nginx/modules /var/lib/nginx/tmp /run/nginx"
