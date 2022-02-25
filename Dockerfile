@@ -11,8 +11,7 @@ ARG RUNDEPS="nginx"
 ARG STARTUPEXECUTABLES="/usr/sbin/nginx"
 ARG MAKEDIRS="/var/log/nginx /usr/lib/nginx/modules /var/lib/nginx/tmp /run/nginx"
 ARG LINUXUSEROWNED="/var/log/nginx /usr/lib/nginx/modules /var/lib/nginx/tmp /run/nginx"
-ARG FINALCMDS=\
-"sed -i 's/80/8080/g' /etc/nginx/http.d/default.conf"
+ARG REMOVEDIRS="/etc/nginx/http.d"
 # ARGs (can be passed to Build/Final) </END>
 
 # Generic template (don't edit) <BEGIN>
