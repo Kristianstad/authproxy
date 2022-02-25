@@ -36,7 +36,7 @@ COPY --from=build /finalfs /
 # =========================================================================
 ENV VAR_CONFIG_DIR="/etc/nginx" \
     VAR_LINUX_USER="nginx" \
-    VAR_FINAL_COMMAND="nginx -g daemon off;"
+    VAR_FINAL_COMMAND="nginx"
 
 # Generic template (don't edit) <BEGIN>
 USER starter
