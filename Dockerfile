@@ -5,7 +5,7 @@
 # Init
 # =========================================================================
 # ARGs (can be passed to Build/Final) <BEGIN>
-ARG SaM_VERSION="2.0.5-3.14"
+ARG SaM_VERSION="2.0.6-3.16"
 ARG IMAGETYPE="application"
 ARG RUNDEPS="nginx apache2-utils"
 ARG STARTUPEXECUTABLES="/usr/sbin/nginx"
