@@ -11,5 +11,6 @@ then
   echo 'replaced BACKEND in /etc/nginx/conf.d/default.conf'
   htpasswd -bc /etc/nginx/.htpasswd "$VAR_USER" "$VAR_PASSWORD"
   echo 'generated /etc/nginx/.htpasswd'
+  find /var -user 185 -exec chown 0:0 {} \;
   sleep 5
 fi
