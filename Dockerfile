@@ -9,7 +9,7 @@ ARG RUNDEPS="nginx apache2-utils"
 ARG STARTUPEXECUTABLES="/usr/sbin/nginx"
 ARG MAKEDIRS="/var/log/nginx /usr/lib/nginx/modules /var/lib/nginx/tmp /run/nginx"
 ARG LINUXUSEROWNED="/var/log/nginx /usr/lib/nginx/modules /var/lib/nginx/tmp /run/nginx"
-ARG REMOVEDIRS="/etc/nginx/http.d"
+#ARG REMOVEDIRS="/etc/nginx/http.d"
 ARG REMOVEFILES="/usr/bin/ab /usr/bin/dbmmanage /usr/bin/htdbm /usr/bin/htdigest /usr/bin/httxt2dbm /usr/bin/logresolve /usr/sbin/checkgid /usr/sbin/envvars /usr/sbin/envvars-std /usr/sbin/htcacheclean /usr/sbin/rotatelogs"
 ARG FINALCMDS="find /var -user 185 -exec chown 0:0 {} \;"
 # ARGs (can be passed to Build/Final) </END>
@@ -38,10 +38,10 @@ COPY --from=build /finalfs /
 # =========================================================================
 ENV VAR_CONFIG_DIR="/etc/nginx" \
     VAR_LINUX_USER="nginx" \
-    VAR_FINAL_COMMAND="nginx -g 'daemon off;'" \
-    VAR_BACKEND="backend:8080" \
-    VAR_USER="user" \
-    VAR_PASSWORD="changeme"
+    VAR_FINAL_COMMAND="nginx -g 'daemon off;'"
+#    VAR_BACKEND="backend:8080" \
+#    VAR_USER="user" \
+#    VAR_PASSWORD="changeme"
 
 # Generic template (don't edit) <BEGIN>
 USER starter
