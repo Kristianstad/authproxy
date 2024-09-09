@@ -1,4 +1,4 @@
-# sam-authproxy
+# authproxy
 A Secure and Minimal docker image of a very basic web authorization proxy. Listens on port 8080 internally.
 
 ## Pre-set environment variables (can be set at runtime)
